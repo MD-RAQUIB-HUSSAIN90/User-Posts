@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="indx-ejs">
+    <h1 class="quora">Qoura Post</h1>
+    <% for(post of posts){%>
+        <div class="post">
+            <h3> username : @<%= post.username%>
+            </h3>
+            <p class="content">content: <%=post.content%>
+            </p>
+            <!-- <button id="btn">Delete</button> -->
+
+            <form method="get" action="/posts/<%=post.id%>">
+                <button> Preview</button>
+            </form>
+
+        </div>
+        <br>
+        <%}%>
+
+            <form method="get" action="/posts/new">
+                <button>Create New Post</button>
+            </form>
+
+            <script src="/script.js"></script>
+</body>
+
+</html>
