@@ -111,3 +111,90 @@ body {
 #home-page {
   margin-top: 10px;
 }
+
+@media (min-width: 600px) {
+  .show-user,
+  .new-form-body {
+    padding: 32px 24px;
+  }
+  .post {
+    max-width: 500px;
+    padding: 20px;
+  }
+  #show-post {
+    max-width: 420px;
+  }
+  .outer {
+    max-width: 400px;
+  }
+}
+
+/* ========================= MOBILE PHONES ========================= */
+@media (max-width: 599px) {
+  .home-page {
+    padding: 20px 14px;
+  }
+  .show-user,
+  .new-form-body {
+    padding: 20px 12px;
+  }
+  .quora {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+  .post {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+  }
+  #show-post {
+    width: 100%;
+    min-height: 220px;
+    padding: 14px;
+    border-radius: 12px;
+  }
+  .outer {
+    width: 100%;
+    min-height: 320px;
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 12px;
+  }
+  .inner-form {
+    padding: 10px;
+  }
+  .index-btn {
+    gap: 8px;
+  }
+  .index-child-btn {
+    padding: 10px 12px;
+    min-height: 44px;
+  }
+}
+/* ========================= VERY SMALL PHONES ========================= */
+@media (max-width: 360px) {
+  .show-user,
+  .new-form-body {
+    padding: 16px 8px;
+  }
+  .post,
+  #show-post,
+  .outer {
+    padding: 12px;
+  }
+  .index-btn {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .index-child-btn {
+    width: 100%;
+  }
+}
+/* ========================= ACCESSIBILITY ========================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
