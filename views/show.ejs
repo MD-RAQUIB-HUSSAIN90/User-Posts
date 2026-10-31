@@ -8,19 +8,24 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<body class="Finded-body ">
-    <h1 class="quora">User  ID</h1>
-    <h4>Post Id : <%= post.id%>
-            <div class="post">
-                <h3> username : <p class="user" style="display: inline;"> @<%= post.username%>
+<body class="show-user">
+
+    <h1 class="quora">User ID</h1>
+
+    <h4>Post Id : <%= post.id%></h4>
+            <div id="show-post">
+                <h2> username : <p class="user" style="display: inline;"> @<%= post.username%>
                     </p>
-                </h3>
-                <p class="content">content: <%=post.content%>
-                </p>
+                </h2>
+
+                <h4 class="content">content: <%=post.content%>
+                </h4>
                 
+               
+
             </div>
 
-            <form method="get" action="/posts"><button>Go Home</button></form>
+            <form method="get" action="/posts" id="home-page"><button class="index-child-btn">Go Home</button></form>
 
 </body>
 

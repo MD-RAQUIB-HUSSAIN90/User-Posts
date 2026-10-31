@@ -25,7 +25,12 @@ let posts = [
 
   { id: uuidv4(), username: "Arsh khan", content: "Software engineer" },
 ];
-// Home page of Posts
+
+app.get("/", (req, res) => {
+  res.render("home_page");
+});
+
+// Post Home page of Posts
 app.get("/posts", (req, res) => {
   res.render("index.ejs", { posts });
 });

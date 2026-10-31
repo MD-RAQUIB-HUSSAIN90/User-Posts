@@ -1,19 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   background-color: yellowgreen;
 }
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  min-height: 100vh;
+}
+#create-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-user,
 .new-form-body {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
   background-color: yellowgreen;
-}
-.Finded-body {
-  display: flex;
-  flex-direction: column;
 }
 .quora {
   color: maroon;
@@ -21,12 +34,26 @@ body {
 .post {
   display: flex;
   flex-direction: column;
+  width: 30%;
   padding-left: 10px;
   padding-bottom: 10px;
   border-radius: 20px;
   background-color: blanchedalmond;
   margin-bottom: 10px;
 }
+
+#show-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5px;
+  height: 300px;
+  width: 300px;
+  border-radius: 10%;
+  background-color: aqua;
+  border: 2px solid black;
+}
+
 .user {
   font-style: italic;
 }
@@ -58,8 +85,29 @@ body {
   align-items: center;
 }
 
-#editContent {
-
+.editContent {
   height: 150px;
   width: 150px;
+}
+
+.index-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.index-child-btn {
+  border-radius: 10%;
+  padding: 5px;
+}
+
+.index-child-btn:hover {
+  background-color: rgb(202, 205, 205);
+}
+.new-username {
+  display: flex;
+  flex-direction: column;
+}
+
+#home-page {
+  margin-top: 10px;
 }

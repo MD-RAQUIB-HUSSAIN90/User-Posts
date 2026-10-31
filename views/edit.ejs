@@ -9,19 +9,20 @@
 </head>
 
 
-<body class="new-form-body">
-    <h2>Edit your post</h2>
+<body class="new-form-body quora">
+    <h1>Edit your post</h1>
 
     <div class="outer">
         <p>Post Id: <%= post.id%></p>
-        <h4 class="h4-username">Post Username: @<%=post.username%></h4>
+        <h3 class="h4-username">Post Username: @<%=post.username%></h3>
         <form method="post" action="/posts/<%=post.id%>?_method=PATCH" class="inner-form">
-            <textarea name="content" id="edit"><%=post.content%></textarea>
-            <button>Submit</button>
+            <textarea name="content"  class="editContent"><%=post.content%></textarea>
+            <button class="index-child-btn">Submit</button>
         </form>
     </div>
 
 
+    <form method="get" action="/posts" id="home-page"><button class="index-child-btn">GO Home</button></form>
 
 </body>
 

@@ -8,30 +8,33 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<body class="indx-ejs">
+<body class="indx-ejs new-form-body">
+
     <h1 class="quora">User Post</h1>
+
     <% for(post of posts){%>
         <div class="post">
             <h3> username : @<%= post.username%>
             </h3>
             <p class="content">content: <%=post.content%>
             </p>
+            <div class="index-btn">
+                <form method="get" action="/posts/<%=post.id%>">
+                    <button class="index-child-btn"> Preview</button>
+                </form>
+                <form method="get" action="/posts/<%=post.id%>/edit">
+                    <button class="index-child-btn"> Edit</button>
+                </form>
+                <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                    <button class="index-child-btn"> Delete Post</button>
+                </form>
+            </div>
 
-
-            <form method="get" action="/posts/<%=post.id%>">
-                <button> Preview</button>
-            </form>
-            <form method="get" action="/posts/<%=post.id%>/edit">
-                <button> Edit</button>
-            </form>
-            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
-                <button> Delete Post</button>
-            </form>
         </div>
         <br>
         <%}%>
             <form method="get" action="/posts/new">
-                <button>Create New Post</button>
+                <button class="index-child-btn">Create New Post</button>
             </form>
 
             <script src="/script.js"></script>

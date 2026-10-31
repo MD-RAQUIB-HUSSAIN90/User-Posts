@@ -9,22 +9,22 @@
 </head>
 
 <body class="new-form-body">
-
+    <h1>Make Your Post</h1>
     <div>
         <form method="post" action="/posts" class="outer">
-            <div> <label for="username">Username</label>
+            <div class="new-username"> <label for="username">Username</label>
                 <input id="username" type="text" placeholder="enter username" name="username" required
                     pattern="[A-Za-z ]{3,20}"
                     title="Username must be 3-20 characters and contain only English letters and spaces.">
             </div>
 
-            <textarea name="content" id="content" rows="5" cols="15" placeholder="Text Your content" required
+            <textarea name="content" id="content" class="editContent"  placeholder="Text Your content" required
                 pattern="[\s\S]{5,500}" title="Content must be between 5 and 500 characters."></textarea>
             <button>submit</button>
         </form>
     </div>
 
-    <form method="get" action="/posts"><button>GO Home</button></form>
+    <form method="get" action="/posts" id="home-page"><button>GO Home</button></form>
 
 </body>
 
