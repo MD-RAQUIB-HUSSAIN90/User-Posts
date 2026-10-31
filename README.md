@@ -2,7 +2,7 @@
 
 A simple and interactive posts management web application built using **Node.js, Express.js, and EJS**. This project demonstrates the fundamental concepts of backend development and RESTful routing.
 
-🌐 **Live Demo:** [View User-Posts](https://user-posts-x7k4.onrender.com/posts)
+🌐 **Live Demo:** [View User-Posts](https://user-posts-x7k4.onrender.com)
 
 ## 📌 About the Project
 
