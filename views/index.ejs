@@ -9,26 +9,24 @@
 </head>
 
 <body class="indx-ejs">
-    <h1 class="quora">Qoura Post</h1>
+    <h1 class="quora">User Post</h1>
     <% for(post of posts){%>
         <div class="post">
             <h3> username : @<%= post.username%>
             </h3>
             <p class="content">content: <%=post.content%>
             </p>
-            <!-- <button id="btn">Delete</button> -->
+
 
             <form method="get" action="/posts/<%=post.id%>">
                 <button> Preview</button>
             </form>
-            <form method="patch" action="/posts/<%=post.id%>">
-                <button> Edit Content</button>
+            <form method="get" action="/posts/<%=post.id%>/edit">
+                <button> Edit</button>
             </form>
-
         </div>
         <br>
         <%}%>
-
             <form method="get" action="/posts/new">
                 <button>Create New Post</button>
             </form>
