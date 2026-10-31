@@ -36,6 +36,12 @@ app.get("/posts/new", (req, res) => {
 // Adding new user
 app.post("/posts", (req, res) => {
   let { username, content } = req.body;
+  let usernameRegex = /^[A-Za-z ]{3,20}$/;
+  let contentRegex = /^[\s\S]{5,500}$/;
+
+  if (!usernameRegex.test(username) || !contentRegex.test(content)) {
+    return res.status(400).send("Invalid username or content!");
+  }
   let id = uuidv4();
   posts.push({ id, username, content });
   res.redirect("/posts");
@@ -53,7 +59,6 @@ app.patch("/posts/:id", (req, res) => {
   let newContent = req.body.content;
   let post = posts.find((p) => id == p.id);
   post.content = newContent;
-  console.log(post);
   res.redirect("/posts");
 });
 
@@ -62,6 +67,12 @@ app.get("/posts/:id/edit", (req, res) => {
   let { id } = req.params;
   let post = posts.find((p) => id == p.id);
   res.render("edit.ejs", { post });
+});
+
+app.delete("/posts/:id", (req, res) => {
+  let { id } = req.params;
+  posts = posts.filter((p) => id !== p.id);
+  res.redirect("/posts");
 });
 
 app.listen(port, () => {

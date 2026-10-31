@@ -24,6 +24,9 @@
             <form method="get" action="/posts/<%=post.id%>/edit">
                 <button> Edit</button>
             </form>
+            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                <button> Delete Post</button>
+            </form>
         </div>
         <br>
         <%}%>
