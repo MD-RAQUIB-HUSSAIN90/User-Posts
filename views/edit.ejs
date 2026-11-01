@@ -13,16 +13,18 @@
     <h1>Edit your post</h1>
 
     <div class="outer">
-        <p style="color: black; padding-left: 5px;">Post Id: <%= post.id%></p>
-        <h3 style="color: black;" class="h4-username">Post Username: @<%=post.username%></h3>
+        <p style="color: black; padding-left: 5px;">Post Id: <%= post.id%>
+        </p>
+        <h3 style="color: black;" class="h4-username">Post Username: @<%=post.username%>
+        </h3>
         <form method="post" action="/posts/<%=post.id%>?_method=PATCH" class="inner-form">
-            <textarea name="content"  class="editContent"><%=post.content%></textarea>
+            <textarea name="content" class="editContent"><%=post.content%></textarea>
             <button class="index-child-btn">Submit</button>
         </form>
     </div>
 
 
-    <form method="get" action="/posts" id="home-page"><button class="index-child-btn">GO Home</button></form>
+    <form method="get" action="/" id="home-page"><button class="index-child-btn">GO Home</button></form>
 
 </body>
 
